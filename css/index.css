@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=Sen&display=swap');
+
+:root {
+    --main-brown: #251b13;
+    --secondary-brown: #493526;
+    --orange: orange;
+    font-size: 16px;
+}
+
+@keyframes button {
+  from {
+    background-color: var(--main-brown);
+    color: var(--orange);
+    }
+  to {
+    background-color: var(--orange);
+    color: var(--main-brown);
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Sen", Monospace;
+}
+
+body {
+    background-color: var(--secondary-brown);
+}
+
+label {
+    color: var(--orange);
+}
+
+.page-warpper {
+    display: flex;
+    width: 70%;
+}
+
+.parallax_0 {
+    width: 100%;
+    height: auto;
+}
+
+.parallax_1 {
+    width: 90%;
+    height: auto;
+}
+
+header {
+    display: flex;
+    width: 100%;
+    background-color: var(--main-brown);
+    justify-content: space-between;
+    height: 4rem;
+}
+
+header div {
+    display: flex;
+}
+
+a, a:focus, a:active, a:hover {
+    color: var(--orange);
+    text-decoration: underline;
+}
+
+header a, header a:focus, header a:active {
+    display: flex;
+    background-color: var(--main-brown);
+    text-decoration: none;
+    font-size: 2rem;
+    padding: 0 1rem;
+    align-items: center;
+}
+
+header a:hover {
+    display: flex;
+    background-color: var(--orange);
+    color: var(--main-brown);
+    animation-name: button;
+    animation-duration: .5s;
+    align-items: center;
+    text-decoration: none;
+}
+
+.register, .register:focus, .register:active {
+    display: flex;
+    background-color: var(--main-brown);
+    color: var(--orange);
+    text-decoration: none;
+    font-size: 2rem;
+    padding: 2rem 2rem;
+    justify-content: center;
+    width: auto;
+    align-items: center;
+    margin: auto auto;
+    width: 20%;
+}
+
+.register:hover {
+    display: flex;
+    background-color: var(--orange);
+    color: var(--main-brown);
+    animation-name: button;
+    animation-duration: .5s;
+    align-items: center;
+    text-decoration: none;
+}
+
+
+.parallax {
+    background-color: orange;
+    display: flex;
+    flex-wrap: wrap;
+    height: 1000px;
+    max-height: 1300px;
+    justify-content: center;
+    align-content: flex-end;
+    overflow-y: hidden;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.parallax img {
+    display: block;
+    overflow-x: hidden;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    background-color: var(--main-brown);
+    color: var(--orange);
+    padding: 0 0 4rem 0;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.user-content {
+    display: grid;
+    grid-template-columns: 2fr 4fr;
+    grid-template-areas: "left right";
+    justify-content: center;
+    background-color: var(--main-brown);
+    color: var(--orange);
+    padding: 0 0 4rem 0;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.requests {
+    grid-area: left;
+}
+
+.history {
+    grid-area: right;
+}
+
+small {
+    display: flex;
+    margin: 0 auto;
+    color: var(--main-brown);
+    width: 60%;
+    padding: 1rem 0;
+}
+
+footer {
+    display: block;
+    color: var(--main-brown);
+    background-color: var(--orange);
+}
+
+.confirmation {
+    width: 100%;
+    height: 100vh;
+    color: var(--orange);
+    font-size: 6rem;
+    display: flex;
+}
+
+.confirmation > p {
+    display: inline;
+    text-align: center;
+    vertical-align: middle;
+}
+
+table {
+    margin: 0 auto;
+    border: var(--orange) 2px;
+    border-style: none solid;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+tr {
+    background: var(--main-brown);
+    margin: 0;
+    padding: 0;
+}
+
+td, th {
+    font-size: 2rem;
+    color: var(--orange);
+    padding: 0 .5rem;
+}
+
+form {
+    border-radius: .5rem;
+    padding: 2rem;
+    background-color: var(--main-brown);
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+    border: var(--orange) 2px solid;
+    justify-content: center;
+}
+
+form label {
+    margin: 0.5rem 0;
+}
+
+form input {
+    background-color: var(--secondary-brown);
+    border: none;
+    padding: 0.5rem;
+    width: auto;
+}
+
+form button {
+    margin: 0.5rem auto;
+    font-size: 1rem;
+    width: 50%;
+    background-color: var(--orange);
+    border: none;
+    padding: 0.5rem 0;
+    
+}
+
+form button:hover {
+    background-color: var(--secondary-brown);
+}
+
+tr:nth-child(odd) {
+    background: var(--secondary-brown)
+}
+
+.form-wrapper {
+    height: calc(100vh - 4rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search, .game-request {
+    display: flex;
+    flex-direction: row;
+    padding: 0.5rem;
+    border: none;
+}
+
+.search input, .game-request input {
+    width: 20rem;
+    margin: 0;
+    padding: 0.5rem;
+}
+
+.game-request {
+    align-items: center;
+}
+
+.search button, .game-request button {
+    margin: 0;
+    padding: 0.5rem 0;
+}
+
+article {
+    margin: 0 0 2rem 0;
+}
+
+
+@media screen and (max-width: 1600px) {
+    .parallax, .content, .page-warpper, .user-content {
+        width: 100%;
+    }
+
+}
+
+@media screen and (min-width: 660px) {
+    .content-wrapper {
+        width: 70%;
+    }
+    
+    article {
+        width: 55%;
+        margin: 0 0 10rem 0;
+    }
+    
+    article:nth-child(even) {
+        margin: 0 0 10rem 45%;
+    }
+    
+    article h2 {
+        margin-bottom: .5rem;
+    }
+    
+    article p {
+        text-indent: 2rem;
+    }
+}

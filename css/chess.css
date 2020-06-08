@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Sen&display=swap');
+
+:root {
+    --main-brown: #251b13;
+    --secondary-brown: #493526;
+    --beige: #FFB987;
+    --orange: orange;
+    font-size: 16px;
+}
+
+@keyframes button {
+  from {
+    background-color: var(--main-brown);
+    color: var(--orange);
+    }
+  to {
+    background-color: var(--orange);
+    color: var(--main-brown);
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Sen", Monospace;
+}
+
+body {
+    background-color: var(--secondary-brown);
+}
+header {
+    display: flex;
+    width: 100%;
+    background-color: var(--main-brown);
+    justify-content: space-between;
+    height: 4rem;
+}
+
+header div {
+    display: flex;
+}
+
+a, a:focus, a:active, a:hover {
+    color: var(--orange);
+    text-decoration: underline;
+}
+
+header a, header a:focus, header a:active {
+    display: flex;
+    background-color: var(--main-brown);
+    text-decoration: none;
+    font-size: 2rem;
+    padding: 0 1rem;
+    align-items: center;
+}
+
+header a:hover {
+    display: flex;
+    background-color: var(--orange);
+    color: var(--main-brown);
+    animation-name: button;
+    animation-duration: .5s;
+    align-items: center;
+    text-decoration: none;
+}
+
+table {
+    border-spacing: 0;
+    background-color: var(--beige);
+}
+
+tr {
+    font-size: 0;
+}
+.x, .y {
+    font-size: 1rem;
+    color: var(--secondary-brown);
+    background-color: var(--orange);
+}
+
+.x {
+    height: 1rem;
+}
+
+.y {
+    width: 1rem;
+}
+
+td, td img {
+    width: calc((100vh - 5rem)/8);
+    height: calc((100vh - 5rem)/8);
+}
+
+tr:nth-child(even) td:nth-child(odd), tr:nth-child(odd) td:nth-child(even) {
+    background-color: var(--main-brown);
+}
+
+#input {
+    color: var(--orange);
+    width: 100%;
+    min-height: 2rem;
+    background: var(--main-brown);
+    border: 0;
+}
+
+@media screen and (max-width: 1024px) {
+    #chess {
+        height: 100vw;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    #game-wrapper {
+        display: grid;
+        grid-template-columns: calc(100vh - 4rem) calc(100% - (100vh - 4rem));;
+        grid-template-areas: "left right";
+    }
+
+    #user-control {
+        grid-area: right;
+        color: var(--orange);
+    }
+
+    #chess {
+        height: calc(100vh - 4rem);
+        display: flex;
+        align-items: center;
+        grid-area: left;
+    }
+}
